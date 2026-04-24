@@ -1,0 +1,29 @@
+/* Korugan specific overrides */
+
+:root {
+  --accent-primary: #009694;
+  --accent-glow: rgba(0, 150, 148, 0.35);
+}
+
+/* Adjust the app icon to use a neutral placeholder or matching color if an image isn't available */
+.app-icon-korugan {
+  background-color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+/* Specific styling for the Korugan hero gradient */
+.korugan-hero .hero-glow {
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 65%);
+}
+
+.korugan-glass-card {
+  border-color: rgba(0, 150, 148, 0.2);
+}
+
+.korugan-glass-card:hover {
+  border-color: rgba(0, 150, 148, 0.4);
+}

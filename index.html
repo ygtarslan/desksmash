@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeskSmash | Playful desktop mayhem for Mac.</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    // FOUC Prevention: Execute immediately before paint
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'light' || (!savedTheme && !prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-content">
+      <a href="#" class="logo" style="display: flex; align-items: center;">
+        <img src="images/app-icon.png" alt="DeskSmash Icon" width="32" height="32" class="app-icon-nav dark-img">
+        <img src="images/app-icon-light.png" alt="DeskSmash Icon" width="32" height="32" class="app-icon-nav light-img">
+        DeskSmash.
+      </a>
+      <div class="nav-links" style="display: flex; align-items: center; gap: 1.5rem;">
+        <button id="theme-toggle" aria-label="Toggle Theme"
+          style="background: none; border: none; color: var(--text-primary); cursor: pointer; display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; transition: opacity 0.2s; opacity: 0.8;">
+          <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
+        </button>
+        <a href="#download" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Coming Soon</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero"
+    style="text-align: center; padding-top: clamp(5.5rem, 10vh, 8rem); padding-bottom: clamp(1rem, 3vh, 2rem); display: flex; flex-direction: column; position: relative; overflow: hidden;">
+    <div class="hero-glow"></div>
+    <div class="container">
+
+      <div class="reveal"
+        style="margin: 0 auto clamp(0.5rem, 1.5vh, 1rem) auto; position: relative; display: inline-block;">
+        <img src="images/app-icon.png" alt="DeskSmash App Icon" width="112" height="112" decoding="async"
+          fetchpriority="high" class="app-icon-hero dark-img"
+          style="margin: 0; width: clamp(80px, 12vw, 112px); height: auto;">
+        <img src="images/app-icon-light.png" alt="DeskSmash App Icon" width="112" height="112" decoding="async"
+          fetchpriority="high" class="app-icon-hero light-img"
+          style="margin: 0; width: clamp(80px, 12vw, 112px); height: auto;">
+      </div>
+
+      <h1 class="reveal delay-100"
+        style="font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -0.03em; margin-bottom: clamp(0.5rem, 1.5vh, 1rem);">
+        Harmless chaos for your Mac.
+      </h1>
+
+      <p class="reveal delay-100"
+        style="font-size: clamp(1rem, 2vw, 1.25rem); color: var(--text-secondary); max-width: 600px; margin: 0 auto clamp(1rem, 2vh, 1.5rem) auto; padding: 0 1rem;">
+        DeskSmash is a native Mac overlay that lets you play with satisfying tools right on your desktop, then clear
+        everything away in an instant.
+      </p>
+
+      <!-- Main Toolbar Visual -->
+      <div style="margin: 0 auto clamp(1rem, 3vh, 2rem) auto; max-width: 100%; padding: 0 1rem; position: relative;">
+        <img src="images/toolbar.png" alt="DeskSmash Toolbar UI" class="dark-img"
+          style="width: 100%; max-width: 1100px; height: auto;">
+        <img src="images/toolbar-light.png" alt="DeskSmash Toolbar UI" class="light-img"
+          style="width: 100%; max-width: 1100px; height: auto;">
+      </div>
+
+      <div class="reveal delay-200"
+        style="display: flex; flex-direction: column; align-items: center; gap: clamp(0.5rem, 1.5vh, 1rem);">
+        <a href="#download" class="btn btn-primary"
+          style="padding: 1.2rem 2.8rem; font-size: 1.15rem; gap: 0.5rem; letter-spacing: -0.02em;">
+          <svg viewBox="0 0 384 512" width="20" height="20" fill="currentColor">
+            <path
+              d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
+          </svg>
+          Coming Soon on the Mac App Store
+        </a>
+
+        <div
+          style="font-size: 0.85rem; color: var(--text-secondary); opacity: 0.9; display: flex; align-items: center; justify-content: center; gap: 0.4rem; font-weight: 500; letter-spacing: -0.01em;">
+          <i data-lucide="monitor" class="mini-icon icon-14" aria-hidden="true"></i>
+          Requires macOS 15.0 or later. Supports Apple Silicon and Intel Macs.
+        </div>
+      </div>
+
+      <div class="micro-trust reveal delay-300" style="margin-top: clamp(1rem, 2vh, 1.5rem);">
+        Built natively with Swift, AppKit, Metal, and SpriteKit, with positional audio and trackpad haptics.
+      </div>
+
+    </div>
+  </header>
+
+  <!-- The Tool Arsenal Marquee -->
+  <section class="section" style="padding-top: 4rem; padding-bottom: 2rem; overflow: hidden;">
+    <div class="marquee-container">
+      <div class="marquee-content">
+        <div class="marquee-group">
+          <img src="images/toolstrip-dark.jpg" alt="DeskSmash tool strip"
+            class="tool-strip protected-img dark-img" loading="lazy" decoding="async" draggable="false">
+          <img src="images/toolstrip-light.jpg" alt="DeskSmash tool strip"
+            class="tool-strip protected-img light-img" loading="lazy" decoding="async" draggable="false">
+        </div>
+        <div aria-hidden="true" class="marquee-group">
+          <img src="images/toolstrip-dark.jpg" alt=""
+            class="tool-strip protected-img dark-img" loading="lazy" decoding="async" draggable="false">
+          <img src="images/toolstrip-light.jpg" alt=""
+            class="tool-strip protected-img light-img" loading="lazy" decoding="async" draggable="false">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- What is DeskSmash? -->
+  <section class="section">
+    <div class="container text-center text-max-width">
+      <h2 class="reveal">What is DeskSmash?</h2>
+      <p class="reveal delay-100" style="font-size: 1.25rem; color: var(--text-primary);">
+        Part desktop toy, part fidget tool, part mini-game.
+      </p>
+      <p class="reveal delay-200">
+        Use a set of 13 satisfying tools right on top of your windows, then clear the screen the moment you are done.
+        Built for short breaks, quick resets, and low-stakes fun.
+      </p>
+    </div>
+  </section>
+
+
+
+  <!-- Choose your mood -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center text-max-width mb-8">
+        <h2 class="reveal">Choose your mood.</h2>
+        <p class="reveal delay-100">Switch modes anytime to match how you want to play.</p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="bento-item bento-item-4 glass-card mode-card mode-card-classic text-center reveal">
+          <div class="feature-icon" style="margin: 0 auto 1.5rem auto; width: 40px; height: 40px;"><i
+              data-lucide="hammer" class="mini-icon icon-20" aria-hidden="true"></i></div>
+          <h3 class="mb-3">Classic</h3>
+          <p style="font-size: 0.95rem;">The original heavier, old-school feel.</p>
+        </div>
+
+        <div class="bento-item bento-item-4 glass-card mode-card mode-card-peaceful text-center reveal delay-100">
+          <div class="feature-icon" style="margin: 0 auto 1.5rem auto; width: 40px; height: 40px;"><i
+              data-lucide="feather" class="mini-icon icon-20" aria-hidden="true"></i></div>
+          <h3 class="mb-3">Peaceful</h3>
+          <p style="font-size: 0.95rem;">A lighter, more playful set of tools and effects.</p>
+        </div>
+
+        <div class="bento-item bento-item-4 glass-card mode-card mode-card-all text-center reveal delay-200">
+          <div class="feature-icon" style="margin: 0 auto 1.5rem auto; width: 40px; height: 40px;"><i data-lucide="gem"
+              class="mini-icon icon-20" aria-hidden="true"></i></div>
+          <h3 class="mb-3">All</h3>
+          <p style="font-size: 0.95rem;">The full set of tools and effects in one mode.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Harmless chaos & Native Mac -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Harmless Chaos Bento Layout -->
+      <div class="bento-grid mb-8">
+        <div class="bento-item bento-item-6 glass-card reveal"
+          style="display: flex; flex-direction: column; justify-content: center;">
+          <h2 class="mb-4">Harmless chaos,<br>by design.</h2>
+          <p>DeskSmash is designed to feel wild without lasting consequences. Every mess is temporary, every action is
+            reversible, and a clean desktop is always one click away.</p>
+          <div class="badge mt-2" style="align-self: flex-start; color: var(--text-primary); font-weight: 600;">All the
+            fun, none of the fallout.</div>
+        </div>
+
+        <div class="bento-item bento-item-6 reveal delay-100"
+          style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div class="glass-card"
+            style="flex: 1; padding: 2rem; display: flex; flex-direction: column; justify-content: center;">
+            <div class="feature-icon mb-3"><i data-lucide="shield" class="mini-icon icon-24" aria-hidden="true"></i>
+            </div>
+            <h3 class="mb-2">Zero system impact</h3>
+            <p style="font-size: 0.95rem; margin-bottom: 0;">DeskSmash runs as a visual overlay above your desktop. Your
+              files, icons, and system settings stay untouched underneath.</p>
+          </div>
+          <div class="glass-card"
+            style="flex: 1; padding: 2rem; display: flex; flex-direction: column; justify-content: center;">
+            <div class="feature-icon mb-3"><i data-lucide="rotate-ccw" class="mini-icon icon-24" aria-hidden="true"></i>
+            </div>
+            <h3 class="mb-2">Effortless cleanup</h3>
+            <p style="font-size: 0.95rem; margin-bottom: 0;">Since all destruction is purely visual, returning to a
+              clean desktop is instant. No cleanup, no lingering artifacts, just your workspace exactly as you left it.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Native Mac Bento Layout -->
+      <div class="bento-grid mt-8">
+        <div class="bento-item bento-item-6 reveal delay-100 order-2 order-lg-1"
+          style="display: flex; flex-direction: column;">
+          <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; align-content: center; flex: 1; margin-top: 1rem;">
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+              <div class="feature-icon" style="width: 32px; height: 32px; margin-bottom: 1rem;"><i data-lucide="braces"
+                  class="mini-icon icon-20" aria-hidden="true"></i></div>
+              <h4 class="mb-2">Swift, SwiftUI, AppKit</h4>
+              <p style="font-size: 0.95rem; margin-bottom: 0;">Built for macOS from the ground up.</p>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+              <div class="feature-icon" style="width: 32px; height: 32px; margin-bottom: 1rem;"><i data-lucide="layers"
+                  class="mini-icon icon-20" aria-hidden="true"></i></div>
+              <h4 class="mb-2">Metal rendering</h4>
+              <p style="font-size: 0.95rem; margin-bottom: 0;">Fast real-time effects and composition.</p>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+              <div class="feature-icon" style="width: 32px; height: 32px; margin-bottom: 1rem;"><i
+                  data-lucide="audio-lines" class="mini-icon icon-20" aria-hidden="true"></i></div>
+              <h4 class="mb-2">Audio &amp; haptics</h4>
+              <p style="font-size: 0.95rem; margin-bottom: 0;">Positional sound and selective trackpad feedback.</p>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+              <div class="feature-icon" style="width: 32px; height: 32px; margin-bottom: 1rem;"><i data-lucide="dock"
+                  class="mini-icon icon-20" aria-hidden="true"></i></div>
+              <h4 class="mb-2">Desktop-aware</h4>
+              <p style="font-size: 0.95rem; margin-bottom: 0;">Designed to sit naturally above your desktop.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bento-item bento-item-6 glass-card reveal order-1 order-lg-2"
+          style="display: flex; flex-direction: column; justify-content: center; border-color: rgba(94, 92, 230, 0.4);">
+          <h2 class="mb-4">Native Mac,<br>all the way down.</h2>
+          <p>DeskSmash is not a wrapper. It is built for macOS from the start, so performance, interaction, and polish
+            feel right at home on your desktop.</p>
+          <p
+            style="margin-bottom: 1.5rem; font-size: 0.95rem; font-style: italic; color: var(--text-secondary); opacity: 0.9;">
+            Performance matters. DeskSmash is tuned for efficient real-time rendering, so it stays lightweight on modern
+            Macs while remaining responsive during longer sessions.</p>
+          <div class="badge mt-2" style="align-self: flex-start; color: var(--text-primary); font-weight: 600;">Even the
+            weird part is built properly.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Why DeskSmash exists -->
+  <section class="section">
+    <div class="container text-center text-max-width">
+      <h2 class="reveal">Why DeskSmash exists</h2>
+      <div class="glass-card reveal delay-100" style="text-align: left; padding: 3rem;">
+        <p>DeskSmash began with a childhood memory of playing the original Desktop Games / Desktop Destroyer on a
+          computer at my parents’ pharmacy, back when simple offline fun meant a lot.</p>
+        <p>Years later, I wanted to revisit that experience on my Mac. When I could not find an alternative that
+          felt right, the idea evolved into something broader: playful desktop chaos that feels fast, reversible, and
+          well made.</p>
+        <p>Rather than simply recreating the original, the goal became to build a modern native Mac experience shaped by
+          that spirit and reimagined for today.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container text-max-width">
+      <h2 class="text-center mb-8 reveal">Frequently Asked Questions</h2>
+
+      <div class="reveal delay-100">
+        <details name="faq">
+          <summary>Does it require Screen Recording permissions?</summary>
+          <p>No. DeskSmash does not require Screen Recording permission. It draws effects on its own transparent overlay
+            and does not capture your screen content.</p>
+        </details>
+
+        <details name="faq">
+          <summary>Does it work on older Intel Macs?</summary>
+          <p>Yes. DeskSmash supports both Apple Silicon and Intel Macs on supported macOS versions.</p>
+        </details>
+
+        <details name="faq">
+          <summary>Does it work in fullscreen or across spaces?</summary>
+          <p>DeskSmash is designed for desktop-wide use and works with standard macOS Spaces and fullscreen behavior.
+          </p>
+        </details>
+
+        <details name="faq">
+          <summary>What tools are included?</summary>
+          <p>DeskSmash currently includes 13 tools across its modes: Hammer, Chainsaw, Machine Gun, Flamethrower,
+            Baseball Bat, Ribbon, Confetti Gun, Bubble Gun, Color Thrower, Phaser, Stamp, Termites, and Polishing Cloth.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section text-center" style="padding-top: 4rem; padding-bottom: 8rem;" id="download">
+    <div class="container text-max-width">
+      <div class="glass-card reveal" style="padding: 5rem 2rem;">
+        <h2 style="font-size: 3rem;">Ready for a more satisfying break?</h2>
+        <p style="font-size: 1.25rem;">Bring a little harmless chaos to your Mac, then get back to work with a clean
+          desktop in one click.</p>
+        <div class="btn-group mt-4" style="justify-content: center;">
+          <a href="#download" class="btn btn-primary"
+            style="padding: 1.1rem 2.5rem; font-size: 1.1rem; gap: 0.5rem; letter-spacing: -0.02em;">
+            <svg viewBox="0 0 384 512" width="18" height="18" fill="currentColor">
+              <path
+                d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
+            </svg>
+            Coming Soon on the Mac App Store
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="border-top: 1px solid var(--glass-border); padding: 3rem 0; text-align: center;">
+    <div class="container">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+        <img src="images/app-icon.png" alt="DeskSmash Icon" width="32" height="32" loading="lazy" decoding="async"
+          class="dark-img"
+          style="width: 32px; height: 32px; border-radius: 8px; opacity: 0.8; filter: grayscale(100%);">
+        <img src="images/app-icon-light.png" alt="DeskSmash Icon" width="32" height="32" loading="lazy" decoding="async"
+          class="light-img"
+          style="width: 32px; height: 32px; border-radius: 8px; opacity: 0.8; filter: grayscale(100%);">
+        <div style="text-align: center; color: var(--text-secondary); opacity: 0.8;">
+          <p style="margin-bottom: 0.5rem; font-size: 0.9rem;">&copy; 2026 DeskSmash. All rights reserved.</p>
+          <p style="margin-bottom: 0; font-size: 0.75rem;">Mac, MacBook Air, macOS, Swift, SwiftUI, and Metal are
+            trademarks of Apple Inc., registered in the U.S. and other countries and regions.</p>
+        </div>
+        <div style="display: flex; gap: 1.5rem; justify-content: center; font-size: 0.85rem;">
+          <a href="terms.html"
+            style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Terms of Service</a>
+          <a href="privacy.html"
+            style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Privacy Policy</a>
+          <a href="mailto:ygtars@protonmail.com"
+            style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@0.511.0/dist/umd/lucide.min.js"></script>
+  <script src="main.js"></script>
+  <script>
+    if (window.lucide) {
+      lucide.createIcons({
+        attrs: {
+          'stroke-width': '1.9'
+        }
+      });
+    }
+
+    // Theme Toggle Logic
+    const themeBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+
+    function updateThemeIcon(theme) {
+      if (theme === 'light') {
+        // Sun Icon
+        themeIcon.innerHTML = `<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>`;
+      } else {
+        // Moon Icon
+        themeIcon.innerHTML = `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>`;
+      }
+    }
+
+    // Set initial icon
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    updateThemeIcon(currentTheme);
+
+    themeBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      const target = current === 'light' ? 'dark' : 'light';
+
+      document.documentElement.setAttribute('data-theme', target);
+      localStorage.setItem('theme', target);
+      updateThemeIcon(target);
+    });
+  </script>
+</body>
+
+</html>
