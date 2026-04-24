@@ -542,8 +542,7 @@ nav {
   }
 
   .nav-links .btn {
-    padding: 0.42rem 0.85rem !important;
-    font-size: 0.8rem !important;
+    display: none !important;
   }
 }
 
