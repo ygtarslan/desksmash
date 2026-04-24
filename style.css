@@ -511,6 +511,114 @@ nav {
   color: var(--text-primary);
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  nav {
+    padding: 0.9rem 0;
+  }
+
+  .nav-content {
+    gap: 0.6rem;
+  }
+
+  .logo {
+    font-size: 1.15rem;
+    letter-spacing: -0.03em;
+  }
+
+  .app-icon-nav {
+    width: 28px;
+    height: 28px;
+    margin-right: 0.5rem;
+  }
+
+  .nav-links {
+    gap: 0.55rem !important;
+  }
+
+  .nav-links .btn {
+    padding: 0.42rem 0.85rem !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body:not(.korugan-page) .hero {
+    min-height: auto;
+    padding-top: calc(env(safe-area-inset-top, 0px) + 6.6rem) !important;
+    padding-bottom: 1rem !important;
+  }
+
+  body:not(.korugan-page) .hero-glow {
+    width: min(86vw, 520px);
+    height: min(86vw, 520px);
+    min-width: 0;
+    min-height: 0;
+    filter: blur(54px);
+    top: 34%;
+  }
+
+  body:not(.korugan-page) .hero h1 {
+    font-size: clamp(2rem, 10vw, 2.6rem) !important;
+    line-height: 1.08;
+    margin-bottom: 0.65rem !important;
+  }
+
+  body:not(.korugan-page) .hero p {
+    margin-bottom: 1rem;
+  }
+
+  body:not(.korugan-page) .hero .btn {
+    width: min(100%, 330px);
+    padding: 0.95rem 1.25rem !important;
+    font-size: 1rem !important;
+  }
+
+  body:not(.korugan-page) .hero .micro-trust {
+    margin-top: 0.9rem !important;
+    letter-spacing: 0.03em;
+    line-height: 1.35;
+  }
+}
+
+@media (max-width: 768px) {
+  body:not(.korugan-page) .bento-grid {
+    gap: 1rem;
+  }
+
+  body:not(.korugan-page) .glass-card {
+    padding: 1.55rem;
+  }
+
+  body:not(.korugan-page) .feature-icon {
+    margin-bottom: 1rem;
+  }
+
+  body:not(.korugan-page) .mb-8 {
+    margin-bottom: 3.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  body:not(.korugan-page) .glass-card {
+    padding: 1.25rem;
+    border-radius: 18px;
+  }
+
+  body:not(.korugan-page) .bento-item h3 {
+    margin-bottom: 0.4rem;
+  }
+
+  body:not(.korugan-page) .bento-item p {
+    margin-bottom: 0.85rem;
+  }
+}
+
 /* Header Text Align */
 .text-max-width {
   max-width: 700px;
