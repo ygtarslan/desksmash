@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Korugan | On-device Privacy, Secured.</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="korugan.css" />
+</head>
+<body class="korugan-page">
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-content">
+      <a href="index.html" class="logo" style="display: flex; align-items: center; font-size: 1.25rem;">
+        <!-- Simple placeholder icon since we don't have the korugan image yet -->
+        <div class="app-icon-nav app-icon-korugan" style="border-radius: 22.5%;">K</div>
+        Korugan.
+      </a>
+      <div class="nav-links">
+        <a href="#download" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">App Store</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero korugan-hero">
+    <div class="hero-glow"></div>
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left Column: Content -->
+        <div class="hero-content">
+          <div class="app-icon-hero app-icon-korugan reveal" style="margin: 0 0 2rem 0; font-size: 3rem;">K</div>
+          <h1 class="reveal delay-100" style="font-size: clamp(2.5rem, 5vw, 4.5rem);">On-device Privacy, Secured.</h1>
+          <p class="reveal delay-100" style="font-size: 1.25rem;">
+            A secure iOS vault that encrypts your files exactly as you'd expect. Without compromises, without tracking, and without cloud servers.
+          </p>
+          
+          <div class="reveal delay-200" style="display: inline-flex; flex-direction: column; align-items: stretch; gap: 0.5rem; margin-top: 2rem;">
+            <a href="#download" class="btn btn-primary" style="padding: 1.1rem 2.5rem; font-size: 1.1rem; gap: 0.5rem; letter-spacing: -0.02em;">
+              <svg viewBox="0 0 384 512" width="18" height="18" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+              Download on the App Store
+            </a>
+            
+            <div style="font-size: 0.85rem; color: var(--text-secondary); opacity: 0.9; display: flex; align-items: center; justify-content: center; gap: 0.4rem; font-weight: 500; letter-spacing: -0.01em;">
+              <i data-lucide="smartphone" class="mini-icon icon-14" aria-hidden="true"></i>
+              Requires iOS 17.0+
+            </div>
+          </div>
+
+          <div class="micro-trust reveal delay-300" style="margin-top: 2rem;">
+            Built natively for iOS with Swift, SwiftData, and Apple CryptoKit.
+          </div>
+        </div>
+
+        <!-- Right Column: Media -->
+        <div class="hero-media reveal delay-300">
+          <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05); background: var(--surface-color); position: relative; z-index: 10;">
+            <div style="width: 100%; display: flex; align-items: center; justify-content: center; aspect-ratio: 9/16; max-height: 70vh; background: #000;">
+              <p style="padding: 2rem; color: var(--text-secondary); text-align: center;">Korugan App Mockup<br><span style="font-size: 0.8rem; opacity: 0.5;">(iOS Interface)</span></p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </header>
+
+  <!-- Quick Value Strip (Bento Grid) -->
+  <section class="section pt-0">
+    <div class="container">
+      <div class="bento-grid">
+        
+        <div class="bento-item bento-item-6 bento-item-lg-3 reveal text-center" style="display: flex; flex-direction: column; align-items: center;">
+          <div class="feature-icon" style="color: var(--accent-primary);">
+            <i data-lucide="lock" class="mini-icon icon-24" aria-hidden="true"></i>
+          </div>
+          <h3>AES-256-GCM</h3>
+          <p style="font-size: 1rem;">File content is locally encrypted using Apple CryptoKit with authenticated encryption and a random nonce.</p>
+        </div>
+
+        <div class="bento-item bento-item-6 bento-item-lg-3 reveal delay-100 text-center" style="display: flex; flex-direction: column; align-items: center;">
+          <div class="feature-icon" style="color: var(--accent-primary);">
+            <i data-lucide="key" class="mini-icon icon-24" aria-hidden="true"></i>
+          </div>
+          <h3>Local Keychain</h3>
+          <p style="font-size: 1rem;">Your 256-bit vault master key never leaves your device. It is non-synchronizable and locked to the device.</p>
+        </div>
+
+        <div class="bento-item bento-item-6 bento-item-lg-3 reveal delay-200 text-center" style="display: flex; flex-direction: column; align-items: center;">
+          <div class="feature-icon" style="color: var(--accent-primary);">
+            <i data-lucide="file-text" class="mini-icon icon-24" aria-hidden="true"></i>
+          </div>
+          <h3>Smart Decryption</h3>
+          <p style="font-size: 1rem;">Text and images decrypt directly into memory. Temporary cleartext files for QuickLook are instantly wiped upon locking.</p>
+        </div>
+
+        <div class="bento-item bento-item-6 bento-item-lg-3 reveal delay-300 text-center" style="display: flex; flex-direction: column; align-items: center;">
+          <div class="feature-icon" style="color: var(--accent-primary);">
+            <i data-lucide="inbox" class="mini-icon icon-24" aria-hidden="true"></i>
+          </div>
+          <h3>Share Inbox</h3>
+          <p style="font-size: 1rem;">The Share Extension writes incoming items into an App Group inbox before the main app firmly encrypts them.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Hardcore local privacy -->
+  <section class="section" style="background-color: var(--surface-color);">
+    <div class="container text-center text-max-width">
+      <h2 class="reveal">Built for extreme local privacy.</h2>
+      <p class="reveal delay-100" style="font-size: 1.25rem; color: var(--text-primary);">
+        Korugan has no cloud sync, no tracking frameworks, and no communication with our servers.
+      </p>
+      <p class="reveal delay-200">
+        We designed Korugan entirely from the ground up for individuals who prioritize physical, local-device security. Storage operates heavily protected and encrypted natively inside the iOS sandbox. 
+      </p>
+    </div>
+  </section>
+
+  <!-- Architecture Details -->
+  <section class="section">
+    <div class="container">
+      
+      <!-- Crypto Bento Layout -->
+      <div class="bento-grid mb-8">
+        <div class="bento-item bento-item-6 glass-card korugan-glass-card reveal" style="display: flex; flex-direction: column; justify-content: center;">
+          <h2 class="mb-4">Cryptography,<br>at the foundation.</h2>
+          <p>Every single file that enters your vault is converted into an encrypted blob formatted strictly as <code style="color: var(--accent-primary); background: rgba(0,150,148,0.1); padding: 0.2rem 0.4rem; border-radius: 4px;">nonce + ciphertext + authentication tag</code>. This protects both the absolute confidentiality and exact integrity of your file data at rest.</p>
+          <div class="badge mt-2" style="align-self: flex-start; color: var(--accent-primary); font-weight: 600; border-color: rgba(0,150,148,0.3);">No backend involved. Period.</div>
+        </div>
+
+        <div class="bento-item bento-item-6 reveal delay-100" style="display: flex; flex-direction: column;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; align-content: center; flex: 1; margin-top: 1rem;">
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+              <h4 class="mb-2">SymmetricKey</h4>
+              <p style="font-size: 0.95rem; margin-bottom: 0;">A single master key generated directly on your iPhone.</p>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+              <h4 class="mb-2">Zero CloudKit</h4>
+              <p style="font-size: 0.95rem; margin-bottom: 0;">The vault operates completely airgapped from iCloud storage mechanics.</p>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+              <h4 class="mb-2">Sidecar Blobs</h4>
+              <p style="font-size: 0.95rem; margin-bottom: 0;">Even automatically generated thumbnail previews are securely encrypted using the identical pipeline.</p>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+              <h4 class="mb-2">Metadata Boundary</h4>
+              <p style="font-size: 0.95rem; margin-bottom: 0;">Filename, size, and type info remain unencrypted in SwiftData purely for extremely fast local indexing and search.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section text-center" style="padding-top: 4rem; padding-bottom: 8rem;">
+    <div class="container text-max-width">
+      <div class="glass-card korugan-glass-card reveal" style="padding: 5rem 2rem; background: linear-gradient(135deg, rgba(30,30,30,0.8) 0%, rgba(10,10,10,0.9) 100%);">
+        <h2 style="font-size: 3rem;">Ready to secure your files?</h2>
+        <p style="font-size: 1.25rem;">Download Korugan and gain an uncompromised, beautiful local vault for your privacy.</p>
+        <div class="btn-group mt-4" style="justify-content: center;">
+          <a href="#download" class="btn btn-primary" style="padding: 1.1rem 2.5rem; font-size: 1.1rem; gap: 0.5rem; letter-spacing: -0.02em;">
+            <svg viewBox="0 0 384 512" width="18" height="18" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+            Download on the App Store
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="border-top: 1px solid var(--glass-border); padding: 3rem 0; text-align: center;">
+    <div class="container">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+        <div class="app-icon-korugan" style="width: 32px; height: 32px; border-radius: 8px; opacity: 0.8; filter: grayscale(100%);">K</div>
+        <div style="text-align: center; color: var(--text-secondary); opacity: 0.8;">
+          <p style="margin-bottom: 0.5rem; font-size: 0.9rem;">&copy; 2026 Korugan. All rights reserved.</p>
+          <p style="margin-bottom: 0; font-size: 0.75rem;">iOS, iPhone, and Swift are trademarks of Apple Inc., registered in the U.S. and other countries and regions.</p>
+        </div>
+        <div style="display: flex; gap: 1.5rem; justify-content: center; font-size: 0.85rem;">
+          <a href="index.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Main DeskSmash Site</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@0.511.0/dist/umd/lucide.min.js"></script>
+  <script src="main.js"></script>
+  <script>
+    if (window.lucide) {
+      lucide.createIcons({
+        attrs: {
+          'stroke-width': '1.9'
+        }
+      });
+    }
+  </script>
+</body>
+</html>
